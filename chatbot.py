@@ -11,6 +11,7 @@ def main():
     # config = configparser.ConfigParser()
     # config.read('config.ini')
     # updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True)
+    #update environment
     updater = Updater(token=(os.environ['ACCESS_TOKEN']), use_context=True)
     dispatcher = updater.dispatcher
 
