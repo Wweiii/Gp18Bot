@@ -19,7 +19,14 @@ jobs: # gather all the jobs that run in the workflow
           echo 'Viewing the file: '
           cat requirements.txt
           
+  safty-check-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out master
+        uses: actions/checkout@master
+
       - name: Security vulnerabilities scan
         uses: aufdenpunkt/python-safety-check@master
+               
           
   
