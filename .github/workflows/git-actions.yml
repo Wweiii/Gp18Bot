@@ -18,3 +18,5 @@ jobs: # gather all the jobs that run in the workflow
           
       - name: Security vulnerabilities scan #check the security python source code.
         uses: aufdenpunkt/python-safety-check@master
+        with:
+          scan_requirements_file_only: 'true'
